@@ -1,0 +1,45 @@
+#spring:
+#    jpa:
+#        database: POSTGRESQL
+#        show-sql: false
+#        hibernate.ddl-auto: update
+#    datasource:
+#        platform: postgres
+#        url: jdbc:postgresql://localhost:5432/postgres
+#        username: juca
+#        password: des07_18   
+#        driverClassName: org.postgresql.Driver
+#server:
+#    port: 9090
+
+#spring:
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Drive 
+#    url: jdbc:mysql://localhost:3306/sistemas
+#    username: root
+#    password: des07_18
+#  jpa:
+#    hibernate.ddl-auto: update
+#    generate-ddl: true
+#    show-sql: true
+#server:#  port: 9090
+
+#spring:
+#  jpa:
+#    database-platform: org.hibernate.dialect.Oracle10gDialect
+#    open-in-view: true
+#    hibernate:
+#      ddl-auto: none
+##      ddl-auto: create-drop
+##      ddl-auto: validate
+#
+#  datasource:
+#    url: jdbc:oracle:thin:@localhost:1521:XE
+#    username: test_user
+#    password: test_user
+#    driver-class-name: oracle.jdbc.OracleDriver
+#
+#logging:
+#  level:
+#    org.hibernate.SQL: DEBUG
+#    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
