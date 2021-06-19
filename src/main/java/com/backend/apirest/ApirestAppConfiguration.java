@@ -18,7 +18,7 @@ public class ApirestAppConfiguration {
 		dataSource.setDriverClassName("org.postgresql.Driver");
 		dataSource.setJdbcUrl("jdbc:postgresql://localhost:5432/postgres");
 		dataSource.setUsername("postgres");
-		dataSource.setPassword("toor");
+		dataSource.setPassword("des07_18");
 		dataSource.setMaximumPoolSize(5);
 		return dataSource;
 	}
@@ -28,7 +28,7 @@ public class ApirestAppConfiguration {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**").allowedMethods("GET", "POST", "PUT", "DELETE")
+                registry.addMapping("/**").allowedMethods("GET", "POST", "PUT", "DELETE","PATCH","HEAD","OPTIONS","COPY")
                 .allowedOrigins("*")
                 .allowedHeaders("*");
             }

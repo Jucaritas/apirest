@@ -23,7 +23,7 @@ public class ServiciosCtrllr {
 		return serviciosService.listServicios();
 	}
 	
-	@GetMapping("/lstf/{cveTipoServ}")
+	@GetMapping("/lista/{cveTipoServ}")
 	public List<MdlServicios> filterTipoServ(@PathVariable Integer cveTipoServ)
 	{
 		return serviciosService.findByTipoServ(cveTipoServ);
