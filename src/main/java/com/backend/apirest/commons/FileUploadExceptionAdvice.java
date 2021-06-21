@@ -20,6 +20,6 @@ public class FileUploadExceptionAdvice {
 	@ExceptionHandler(Exception.class)
 	public ResponseEntity<Response> handleException(Exception e)
 	{
-		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(new Response("Se ha generado un error en el servidor!"));
+		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new Response("Se ha generado un error al procesar tu petición!"));
 	}
 }

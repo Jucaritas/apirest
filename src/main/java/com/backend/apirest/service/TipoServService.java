@@ -18,9 +18,9 @@ public class TipoServService {
 	private TipoServRepo tServRepo;
 	
 	public List<TipoServicios> listTipoServ() {
-        return tServRepo.findAll();
+        return tServRepo.orderByCve();
     }
-
+	
     public void saveTipoServ(TipoServicios tipoServ) {
     	tServRepo.save(tipoServ);
     }

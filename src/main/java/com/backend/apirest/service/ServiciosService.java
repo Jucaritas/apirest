@@ -19,7 +19,7 @@ public class ServiciosService {
 	private ServiciosRepo serviciosRepo;
 	
 	public List<MdlServicios> listServicios() {
-        return serviciosRepo.findAll();
+        return serviciosRepo.orderServiciosById();
     }
 
     public void saveServicio(MdlServicios servicio) {

@@ -9,8 +9,8 @@
 #        username: postgres
 #        password: toor   
 #        driverClassName: org.postgresql.Driver
-#server:
-#    port: 9090
+server:
+    port: 9090
 #spring:
 #  datasource:
 #    driver-class-name: com.mysql.cj.jdbc.Drive 
