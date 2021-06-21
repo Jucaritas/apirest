@@ -17,6 +17,7 @@ public class ServiciosCtrllr {
 
 	@Autowired
 	private ServiciosService serviciosService; 
+	
 	@GetMapping("/lista")
 	public List<MdlServicios> getListaServicios() 
 	{
