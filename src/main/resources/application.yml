@@ -9,8 +9,8 @@
 #        username: postgres
 #        password: toor   
 #        driverClassName: org.postgresql.Driver
-server:
-    port: 9090
+#server:
+#    port: 9090
 #spring:
 #  datasource:
 #    driver-class-name: com.mysql.cj.jdbc.Drive 
@@ -21,4 +21,4 @@ server:
 #    hibernate.ddl-auto: update
 #    generate-ddl: true
 #    show-sql: true
-#server:#  port: 9090
+server:  port: 9090

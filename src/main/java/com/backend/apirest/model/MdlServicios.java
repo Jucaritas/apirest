@@ -11,7 +11,6 @@ import javax.persistence.Table;
 @Table(name = "servicios", schema = "public")
 public class MdlServicios {
 
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
