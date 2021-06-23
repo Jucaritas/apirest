@@ -2,12 +2,12 @@ package com.backend.apirest.model;
 
 public class Response {
 	
+	private String message;
+	
 	public Response(String message) {
 		super();
 		this.message = message;
 	}
-
-	private String message;
 
 	public String getMessage() {
 		return message;
