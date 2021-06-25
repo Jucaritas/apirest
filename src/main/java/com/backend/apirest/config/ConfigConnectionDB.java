@@ -12,7 +12,7 @@ public class ConfigConnectionDB {
 	public DataSource getDataSource() {
 		HikariDataSource dataSource = new HikariDataSource();
 		dataSource.setDriverClassName("org.postgresql.Driver");
-		dataSource.setJdbcUrl("jdbc:postgresql://localhost:5432/desarrollo");
+		dataSource.setJdbcUrl("jdbc:postgresql://localhost:5432/postgres");
 		dataSource.setUsername("postgres");
 		dataSource.setPassword("toor");
 		dataSource.setMaximumPoolSize(5);

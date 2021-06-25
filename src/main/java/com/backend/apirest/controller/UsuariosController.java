@@ -19,7 +19,7 @@ import com.backend.apirest.service.UsuariosService;
 import com.backend.apirest.model.UsuariosModel;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/users")
 public class UsuariosController {
 
 	@Autowired
