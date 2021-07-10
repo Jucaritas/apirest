@@ -1,14 +1,16 @@
-#spring:
-#    jpa:
-#        database: POSTGRESQL
-#        show-sql: false
-#        hibernate.ddl-auto: update
-#    datasource:
-#        platform: postgres
-#        url: jdbc:postgresql://localhost:5432/postgres
-#        username: postgres
-#        password: toor   
-#        driverClassName: org.postgresql.Driver
+spring:
+    jpa:
+        database: POSTGRESQL
+        show-sql: false
+        hibernate.ddl-auto: update
+    datasource:
+        platform: postgres
+        url: jdbc:postgresql://localhost:5432/postgres
+        username: postgres
+        password: toor   
+        driverClassName: org.postgresql.Driver
+    servlet:      multipart:
+        max-file-size: 80MB        max-request-size: 80MB
 #server:
 #    port: 9090
 #spring:
@@ -21,4 +23,4 @@
 #    hibernate.ddl-auto: update
 #    generate-ddl: true
 #    show-sql: true
-server:  port: 9090
+server:  port: 9095
