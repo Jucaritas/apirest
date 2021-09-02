@@ -15,43 +15,33 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.backend.apirest.dto.UsuariosDto;
 import com.backend.apirest.service.UsuariosService;
-import com.backend.apirest.model.UsuariosModel;
 
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/usuarios")
 public class UsuariosController {
 
 	@Autowired
 	private UsuariosService uService;
 	
-	@GetMapping("/")
-	public List<UsuariosModel> list()
+	@GetMapping("/lista")
+	public List<UsuariosDto> list() throws Exception
 	{
 		return uService.listAllUser();
 	}
-	
-	@GetMapping("/{id}")
-    public ResponseEntity<UsuariosModel> get(@PathVariable Integer id) {
-        try {
-        	UsuariosModel user = uService.getUser(id);
-            return new ResponseEntity<UsuariosModel>(user, HttpStatus.OK);
-        } catch (NoSuchElementException e) {
-            return new ResponseEntity<UsuariosModel>(HttpStatus.NOT_FOUND);
-        }
-    }
+
 	
 	@PostMapping("/add")
-    public ResponseEntity<Object> add(@RequestBody UsuariosModel user) {
+    public ResponseEntity<Object> add(@RequestBody UsuariosDto user) throws Exception {
         uService.saveUser(user);
         return ResponseEntity.status(HttpStatus.CREATED).body("Se ha creado el usuario con exito!");
     }
 	
 	@PutMapping("/update/{id}")
-    public ResponseEntity<?> update(@RequestBody UsuariosModel user, @PathVariable Integer id) {
-        try {
-        	user.setId(id);            
-            uService.saveUser(user);
+    public ResponseEntity<?> update(@RequestBody UsuariosDto user, @PathVariable Integer id) throws Exception {
+        try {          
+            uService.updateUsuario(user);
             //return new ResponseEntity<>(HttpStatus.OK);
             return ResponseEntity.status(HttpStatus.OK).body("Se actualizo al usuario con exito");
         } catch (NoSuchElementException e) {
@@ -59,7 +49,7 @@ public class UsuariosController {
         }
     }
 	@DeleteMapping("/delete/{id}")
-    public ResponseEntity<String> delete(@PathVariable Integer id) {
+    public ResponseEntity<String> delete(@PathVariable Integer id) throws Exception {
         uService.deleteUser(id);
         return ResponseEntity.status(HttpStatus.OK).body("El usuario fue eliminado");
     }

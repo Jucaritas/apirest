@@ -3,35 +3,17 @@ package com.backend.apirest.service;
 
 import java.util.List;
 
-import javax.transaction.Transactional;
-
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.backend.apirest.model.UsuariosModel;
-import com.backend.apirest.repository.UsuariosRepo;
+import com.backend.apirest.dto.UsuariosDto;
 
 @Service
-@Transactional
-public class UsuariosService {
-
-	@Autowired
-	private UsuariosRepo usuariosRepo;
+public interface UsuariosService {
 	
-	public List<UsuariosModel> listAllUser() {
-        return usuariosRepo.findAll();
-    }
-
-    public void saveUser(UsuariosModel user) {
-    	usuariosRepo.save(user);
-    }
-
-    public UsuariosModel getUser(Integer id) {
-        return usuariosRepo.findById(id).get();
-    }
-
-    public void deleteUser(Integer id) {
-    	usuariosRepo.deleteById(id);
-    }
+	List<UsuariosDto> listAllUser() throws Exception;
+    String saveUser(UsuariosDto user) throws Exception;
+    UsuariosDto getUser(Integer id) throws Exception;
+    String updateUsuario(UsuariosDto user) throws Exception;
+    String deleteUser(Integer id) throws Exception;
     
 }
